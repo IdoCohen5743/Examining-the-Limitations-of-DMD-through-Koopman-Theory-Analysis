@@ -20,66 +20,29 @@ This code has been implemented using Matlab-2018b
 
 ```
 code_submission 	# code and data together
-├── fast_experiment1D_final.m  		 # Full experiment script for toy example (Three pulses)
-├── fast_experiment2D_zebra_final.m  # Full experiment script for harder example (Line from zebra image)
-├── proj_tvl2.m          			 # Helper function for ss_freq_tv_evolve
-├── ss_freq_tv_evolve.m   			 # Mathematical Engine of TV - evolve TV flow
-├── TV_data1D.mat         		     # Data for toy example (three pulse) experiment
-├── TV_ZebraLine.mat      			 # Data for zebra experiment
-├── zebra_media_gmu.jpg   			 # Image from which the input signal for zebra experiment was taken
-├── Additional Data       			 # More Data can be added here
+├── LinearDecay_EigenFunctional.m  		 # Full experiment script for toy example (Two functional)
+├── mexLasso.mex  						 # Lasso implementation of from [1]
+├── write_pdf_New_Image.m          		 # PDF creator
+[1] M. Elad,Sparse and redundant representations:  from theory to applications in signal and image process-ing, Springer Science & Business Media, 2010
 ```
 
 ## Run algorithm
 ```bash
 # Run toy example experiment
-fast_experiment1D_final
-```
-
-```bash
-# Run zebra row experiment
-fast_experiment2D_zebra_final
-```
-Full computational mode:
-```bash
-# In order to run either code without relying on pre-saved data in .mat files, please change the loadData flag in line 3 to 0
-loadData = 0;
+LinearDecay_EigenFunctional.m
 ```
 
 ## Runtime
-Running in full computational mode (without loading data) might change from machine to machine. Results presented for running experiment on a 8-Gen. Core i7 laptop, with 16BG of RAM.
-
-- A full run of the basic toy example experiment takes ~8.5 Minutes
-- A full run of the advanced experiment with the row from the zebra image takes ~2 Hours
-
-The above mentioned long times are due to usage of standard method for computing subgradients iteratively, which is the method we compare to.
-
-- All other run modes take less than 1 minute
+Not enough to make a coffee
 
 
 ## Citation
 If you find our work useful, please cite our paper:
 ```bash
-@InProceedings{10.1007/978-3-030-75549-2_5,
-author="Cohen, Ido
-and Berkov, Tom
-and Gilboa, Guy",
-editor="Elmoataz, Abderrahim
-and Fadili, Jalal
-and Qu{\'e}au, Yvain
-and Rabin, Julien
-and Simon, Lo{\"i}c",
-title="Total-Variation Mode Decomposition",
-booktitle="Scale Space and Variational Methods in Computer Vision",
-year="2021",
-publisher="Springer International Publishing",
-address="Cham",
-pages="52--64",
-isbn="978-3-030-75549-2"
-}
+
 
 
 ```
 
-Feel free to place issues here or contact me via the e-mail in my personal page.
+Feel free to place issues here or contact us via the e-mail in my personal page.
  
